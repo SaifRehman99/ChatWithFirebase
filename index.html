@@ -6,15 +6,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+    <!-- bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fontawesome cdn here -->
+    <script src="https://kit.fontawesome.com/ec2f5d14f1.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
     <!-- custom css here -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Baatien Kro</title>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-dark bg-danger">
+        <a class="navbar-brand text-white" href="index.html"><i class="fas fa-comments"></i> Let's Chat</a>
+    </nav>
+
+    <div class="wrapper">
+        <div id="overlay">
+            <div class="container">
+                <h2 class=""><i class="fas fa-comments mt-5"></i> Let's Chat</h2>
+                <div class="buttons my-5 text-center">
+                    <button class="btn btn-info mr-2 mb-2" id="general">#General</button>
+                    <button class="btn btn-info mr-2 mb-2" id="gamming">#Gamming</button>
+                    <button class="btn btn-info mr-2 mb-2" id="discussion">#Discussion</button>
+                    <button class="btn btn-info mr-2 mb-2" id="hangouts">#Hangouts</button>
+                </div>
+
+
+                <!-- chats add here -->
+                <div class="chats">
+                    <ul></ul>
+                </div>
+
+
+                <!-- message and update name -->
+                <form id="sendMessage">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Type...</span>
+                        </div>
+                        <input type="text" class="form-control sender">
+                        <div class="input-group-append">
+                            <input type="submit" class="input-group-text"></input>
+                        </div>
+                    </div>
+                </form>
+
+
+
+                <!-- update Name -->
+                <form id="updateName">
+                    <div class="input-group mt-4">
+
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Name</span>
+                        </div>
+                        <input type="text" class="form-control updater">
+                        <div class="input-group-append">
+                            <input type="submit" class="input-group-text"></input>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+
 </body>
-<script src="/scripts/ui.js"></script>
-<script src="/scripts/app.js"></script>
+
+
+
+
+<!-- jquery script -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- custom scripts here -->
+<script src="scripts/chat.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/app.js"></script>
 
 </html>

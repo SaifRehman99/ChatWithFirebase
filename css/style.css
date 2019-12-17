@@ -1,0 +1,43 @@
+    *,
+    *::before,
+    *::after {
+        margin: 0%;
+        padding: 0%;
+        overflow: hidden;
+    }
+    
+    html {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .container {
+        max-width: 650px;
+    }
+    
+    .wrapper {
+        background-image: url("../img/blur-car-cellphone-contemporary-230554.jpg");
+        /* The image used */
+        background-color: #cccccc;
+        /* Used if the image is unavailable */
+        height: 100vh;
+        /* You must set a specified height */
+        background-position: center;
+        /* Center the image */
+        background-repeat: no-repeat;
+        /* Do not repeat the image */
+        background-size: cover;
+        position: relative;
+        /* Resize the background image to cover the entire container */
+    }
+    
+    #overlay {
+        position: absolute;
+        width: 100vw;
+        /* Full width (cover the whole page) */
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+    }
