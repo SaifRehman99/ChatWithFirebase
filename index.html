@@ -22,8 +22,12 @@
 
 <body>
 
-    <nav class="navbar navbar-dark bg-danger">
+    <nav class="navbar navbar-dark bg-info">
         <a class="navbar-brand text-white" href="index.html"><i class="fas fa-comments"></i> Let's Chat</a>
+        <div class="right">
+            <button class="btn btn-info signup" data-toggle="modal" data-target="#registerModal">SignUp<i class="fas fa-user-plus"></i></button>
+            <button class="btn btn-info login" data-toggle="modal" data-target="#loginModal">Login<i class="fas fa-sign-in-alt"></i></button>
+        </div>
     </nav>
 
     <div class="wrapper">
@@ -40,7 +44,7 @@
 
                 <!-- chats add here -->
                 <div class="chats">
-                    <ul></ul>
+                    <ul class="chatList"></ul>
                 </div>
 
 
@@ -50,7 +54,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">Type...</span>
                         </div>
-                        <input type="text" class="form-control sender">
+                        <input type="text" class="form-control" id="sender">
                         <div class="input-group-append">
                             <input type="submit" class="input-group-text"></input>
                         </div>
@@ -61,12 +65,12 @@
 
                 <!-- update Name -->
                 <form id="updateName">
-                    <div class="input-group mt-4">
+                    <div class="input-group my-5">
 
                         <div class="input-group-prepend">
                             <span class="input-group-text">Name</span>
                         </div>
-                        <input type="text" class="form-control updater">
+                        <input type="text" class="form-control" id="updater">
                         <div class="input-group-append">
                             <input type="submit" class="input-group-text"></input>
                         </div>
@@ -78,13 +82,93 @@
 
 
         </div>
-    </div>
+
+        <!-- signup MODAL -->
+        <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title">Register to Chat<i class="fas fa-comments"></i> </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                    </div>
+                    <form class="modal-body register">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-envelope"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon2"><i class="fas fa-users"></i></span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="User Name" id="name" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon3"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" id="password" aria-describedby="basic-addon2">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel <i class="fas fa-ban"></i></button>
+                            <button type="submit" class="btn btn-primary">SignUp<i class="fas fa-user-plus"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- login MODAL -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title">Login to Chat<i class="fas fa-comments"></i> </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                    </div>
+                    <form class="modal-body login">
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-users"></i></span>
+                            </div>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+                            </div>
+                            <input type="password" class="form-control" placeholder="Password" id="password1">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel <i class="fas fa-user-plus"></i></button>
+                            <button type="submit" class="btn btn-primary">Login<i class="fas fa-sign-in-alt"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
 
 </body>
 
+<!-- date library here -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
 
-
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-analytics.js"></script>
 <!-- jquery script -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -94,6 +178,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <!-- custom scripts here -->
+<script src="scripts/firebase-config.js"></script>
 <script src="scripts/chat.js"></script>
 <script src="scripts/ui.js"></script>
 <script src="scripts/app.js"></script>
