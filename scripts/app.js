@@ -5,6 +5,8 @@ const list = document.querySelector('.chatList');
 const loginForm = document.querySelector('.login');
 const registerForm = document.querySelector('.register');
 
+const registerMsg = document.querySelector('.registerMsg');
+
 
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
